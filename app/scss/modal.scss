@@ -27,11 +27,22 @@
 		padding: 52px 80px 54px;
 		max-height: 90%;
 		max-width: 90%;
-		overflow-y: auto;
+		position: relative;
 
 		.form__column{
-			text-align: right;
+			// text-align: right;
 			text-decoration: underline;
 		}
+	}
+
+	&__close {
+		width: 21px;
+		height: 21px;
+		position: absolute;
+		left: calc(100% + 50px);
+		top: 55px;
+		background: url("../images/dest/close.png") no-repeat 50%;
+		background-size: 100% 100%;
+		cursor: pointer;
 	}
 }

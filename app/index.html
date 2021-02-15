@@ -29,14 +29,15 @@
 							</ul>
 						</div>
 						<span class="navigation__menu_mobile"><span></span></span>
-						<div class="navigation__enter">
-							<a href="#">
-								<div class="navigation__enter__button">
+						<div class="navigation__enter js-login">
+
+							<div class="navigation__enter__button">
+								<a class="js-login" href="#">
 									<img src="images/dest/enter.png" alt="enter">
 									<p>Вход</p>
-								</div>
+								</a>
+							</div>
 
-							</a>
 
 						</div>
 					</div>
@@ -150,7 +151,7 @@
 				<img class="infoBlock__divider" src="images/dest/divider.png">
 			</div>
 		</div>
-		<div class="modal">
+		<div class="modal modal--login">
 			<div class="modal__wrapper">
 				<div class="modal__window">
 					<h5 class="title--30">Личный кабинет</h5>
@@ -164,7 +165,9 @@
 									for="remember">Запомните меня</label></div>
 							<div class="form__column"><a href="">Я ЗАБЫЛ ПАРОЛЬ</a></div>
 						</div>
+						<input class="btn__fullWidth" type="submit" value="Войти" name="login">
 					</form>
+					<span class="modal__close"></span>
 				</div>
 			</div>
 		</div>
