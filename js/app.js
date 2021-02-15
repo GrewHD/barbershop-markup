@@ -26,4 +26,22 @@ $(document).ready(function () {
 
   });
 
+
+  //login modal
+  $('.js-login').on('click', function (e) {
+    e.preventDefault();
+    $('.modal--login').fadeIn(400);
+  });
+
+  $('.modal__close').on('click', function (e) {
+    e.preventDefault();
+    $('.modal--login').fadeIn(400);
+  });
+
+  $(document).on('mouseup', function (event) {
+    const loginModal = $('.modal__window');
+    if (!loginModal.is(event.target) && loginModal.has(event.target).length === 0) {
+      $('.modal').fadeOut(400);
+    }
+  })
 });

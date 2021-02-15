@@ -113,7 +113,7 @@
 		}
 		
 		&__column{
-		width: calc(50% - 10px);
+		// width: calc(50% - 10px);
 
 		@include screen(480){
 		width: 100%;	
@@ -157,7 +157,7 @@
 						background-image: url("../images/dest/cross.png");
 						background-size: 12px;
 					}
-	}
-}
+				}
+			}
 		}
 	}
