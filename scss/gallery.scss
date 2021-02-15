@@ -1,0 +1,76 @@
+
+.infoBlock:nth-child(2) .col--50:last-child .title--30{
+	margin: 0 0 48px;
+
+	@include screen(768){
+ 		margin: 0 0 30px;
+ 		}
+}
+
+.swiper-container{
+	max-width: 289px;
+	overflow: hidden;
+	margin-left: 0;
+
+
+		@include screen(768){
+		max-width: none;
+ 		overflow:visible;
+		margin-left: 0;
+ 		}
+
+ 	.btn-align{
+ 		display: flex;
+ 		justify-content: space-between;
+ 	}
+}
+.swiper-wrapper{
+	position: relative;
+	box-sizing: border-box;
+}
+.swiper-wrapper .swiper-slide {
+	flex-shrink: 1;
+}
+.swiper-wrapper .swiper-slide img {
+    border: 4px solid #fff;
+    max-width: 286px;
+}
+.swiper-button-prev:after,.swiper-button-next:after {
+	position: absolute;
+	top: 35%;
+	left: 35%;
+	font-family: inherit;	
+}
+.swiper-button-prev, .swiper-button-next{
+	position: relative;
+	margin-top: 37px;
+	margin-right: 0;	
+
+	@include screen(768){
+		margin-top: 15px;
+	}
+
+
+}
+.swiper-button-next, .swiper-container-rtl .swiper-button-prev {
+    right: auto;
+    left: auto;
+    }
+.swiper-button-prev, .swiper-container-rtl .swiper-button-next {
+    right: auto;
+    left: auto;
+}
+.swiper-button-prev, .swiper-button-next {
+	@extend .btn__large;
+}
+.swiper-container .swiper-button-next:after{
+	content: "НАЗАД";
+	font-size: 14px;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+.swiper-container .swiper-button-prev:after{
+	content: "ВПЕРЕД";
+	font-size: 14px;
+	text-transform: uppercase;
+}

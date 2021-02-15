@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&display=swap');
+*,
+*:before,
+*:after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	font: 14px/24px 'PT Sans Narrow', Arial, Tahoma, sans-serif;
+	text-transform: uppercase;
+}
+ul{
+	padding: 0;
+	margin: 0;
+}
+img{
+	max-width: 100%;
+	height: auto;
+}
+
+a{
+	color: $black;
+	text-decoration: none;
+}
+
+input, button{
+	outline: none;
+}
+
+.container{
+ max-width: 960px;
+ padding: 0 10px;
+ margin: 0 auto;
+}
+.wrapper{
+overflow: hidden;
+position: relative;
+}
+
+body{
+	background: url("../images/dest/header.jpg") no-repeat 50% 0;
+	background-size: cover;
+}
+
+.row{
+	display: flex;
+	justify-content: space-between;
+
+	@include screen(480){
+		flex-direction: column;
+	}
+}
+.col{
+flex-grow: 1;
+width: 100%;
+
+	&--50{
+		@extend .col;
+		width: 50%;
+	}
+	&--33{
+		@extend .col;
+		width: 33.3333%;
+
+		@include screen(480){
+			width: 100%;
+			text-align: center;
+			padding: 20px 0;
+		}
+	}
+	}
+

@@ -1,0 +1,163 @@
+::-webkit-input-placeholder { /* Edge */
+  color: $black;
+  text-transform: uppercase;
+  font: 14px/24px 'PT Sans Narrow', Arial, Tahoma, sans-serif;
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: $black;
+  text-transform: uppercase;
+  font: 14px/24px 'PT Sans Narrow', Arial, Tahoma, sans-serif;
+}
+
+::placeholder {
+  color: $black;
+  text-transform: uppercase;
+  font: 14px/24px 'PT Sans Narrow', Arial, Tahoma, sans-serif;
+}
+.btn{
+	background: $black;
+	color: $white;
+	height: 43px;
+	text-align: center;
+	border: 2px solid $black;
+	padding: 7px 12px 6px;
+	display: inline-block;
+	transition: .3s;
+	font-size: 14px;
+	text-transform: uppercase;
+	font-family: 'PT Sans Narrow', sans-serif;
+
+	&:hover{
+		background: $white;
+		color: $black;
+	}
+
+	&__small{
+		@extend .btn;
+		width: 43px;
+	}
+ 	&__medium{
+ 	@extend .btn;
+ 	min-width: 78px;
+ 	}
+	&__large{
+		@extend .btn;
+		min-width: 140px;
+
+		@include screen(480){
+			min-width: 125px;
+		}
+	}
+	&__fullWidth{
+		@extend .btn;
+		width: 100%;
+		margin-top: 5px;
+
+		@include screen(480){
+			margin-top: 20px;
+		}
+	}
+}
+
+.input{
+	background: $input_bg;
+	border: 2px solid #000;
+	background-repeat: no-repeat;
+	height: 43px;
+	width: 100%;
+	display: inline-block;
+	vertical-align: top;
+	padding: 12px 40px 12px 15px;
+
+	&--login{
+		@extend .input;
+		background-image: url("../images/dest/login.png");
+		background-position: calc(100% - 13px) 50%;
+		}
+
+	&--password{
+		@extend .input;
+		background-image: url("../images/dest/password.png");
+		background-position: calc(100% - 13px) 50%;
+		}
+	&--date{
+		@extend .input;
+		}
+	&--name{
+		@extend .input;
+		}
+	&--time{
+		@extend .input;
+		}
+	&--phone{
+		@extend .input;
+		}
+
+	&:first-child{
+		margin-bottom: 20px;
+	}
+	}
+
+	.form{
+	
+
+		&__row{
+			display: flex;
+			align-content: center;
+			justify-content: space-between;
+
+			@include screen(1200){
+				flex-wrap: wrap;
+			}
+		}
+		
+		&__column{
+		width: calc(50% - 10px);
+
+		@include screen(480){
+		width: 100%;	
+		}
+		}
+		&__column:nth-child(1){
+			margin-bottom: 20px;
+		}
+		}
+	
+
+	input {
+
+		&[type="checkbox"]{
+			display: none;
+
+			& + label{
+				position: relative;
+				padding-left: 32px;
+				padding-top: 2px;
+
+				&:before{
+					content: '';
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 20px;
+					height: 20px;
+					border: 2px solid $black;
+					background-color: $input_bg;
+					background-repeat: no-repeat;
+					background-position: 50%;
+				}
+			}
+
+			&:checked{
+
+				& + label{
+
+					&:before{
+						background-image: url("../images/dest/cross.png");
+						background-size: 12px;
+					}
+	}
+}
+		}
+	}
